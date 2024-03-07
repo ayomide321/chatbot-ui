@@ -106,6 +106,7 @@ export const CreateModel: FC<CreateModelProps> = ({ isOpen, onOpenChange }) => {
               type="number"
               placeholder="4096"
               min={0}
+              max={8192}
               value={contextLength}
               onChange={e => setContextLength(parseInt(e.target.value))}
             />

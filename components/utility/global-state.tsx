@@ -58,6 +58,7 @@ export const GlobalState: FC<GlobalStateProps> = ({ children }) => {
     OpenRouterLLM[]
   >([])
 
+  const [developmentMode, setDevelopmentMode] = useState(false)
   // WORKSPACE STORE
   const [selectedWorkspace, setSelectedWorkspace] =
     useState<Tables<"workspaces"> | null>(null)
@@ -77,8 +78,8 @@ export const GlobalState: FC<GlobalStateProps> = ({ children }) => {
   const [userInput, setUserInput] = useState<string>("")
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([])
   const [chatSettings, setChatSettings] = useState<ChatSettings>({
-    model: "gpt-4-turbo-preview",
-    prompt: "You are a helpful AI assistant.",
+    model: "gpt-3.5-turbo",
+    prompt: "You are a helpful AI assistant created by Ayomide Omolewa.",
     temperature: 0.5,
     contextLength: 4000,
     includeProfileContext: true,
